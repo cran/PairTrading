@@ -25,5 +25,6 @@ par(new=TRUE)
 plot(params$spread)
 
 #Performance of pair trading
-return.pairtrading <- Return(price.pair, 1, lag(signal), lag(params$hedge.ratio))
+return.pairtrading <- Return(price.pair, lag(signal), lag(params$hedge.ratio))
 plot(100 * cumprod(1 + return.pairtrading))
+

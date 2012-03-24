@@ -14,23 +14,21 @@
 \tabular{ll}{
 Package: \tab PairTrading\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2011-10-19\cr
+Version: \tab 1.1\cr
+Date: \tab 2012-03-24\cr
 License: \tab BSD \cr
 LazyLoad: \tab yes\cr
 }
 }
 \author{
 Shinichi Takayanagi, Kohta Ishikawa
-Maintainer: Shinichi Takayanagi<teramonagi@gmail.com>, Kohta Ishikawa<quantumcorgi@gmail.com>
+Maintainer: Shinichi Takayanagi<shinichi.takayanagi@gmail.com>
 }
 \references{
 Engle, Robert F. and C.W.J. Granger, 1987, Co-integration and error correction: Representation, estimation, and testing, Econometrica 55, 251-276. 
 Granger, C.W.J., 1986, Developments in the study of cointegrated economic variables, Oxford Bulletin of Economics and Statistics 48, 213-228.
 }
 \keyword{ package }
-\seealso{
-}
 \examples{
 #load library
 library(PairTrading)

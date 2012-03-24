@@ -1,16 +1,16 @@
 Return <- function(price.pair, signal.lagged, hedge.ratio.lagged)
 {
   #
-  signal      <- na.omit(cbind(signal.lagged, -1*(signal.lagged)))
-  return.pair <- na.omit(.return(price.pair, type="discrete"))
-  weight.pair <- na.omit(HedgeRatio2Weight(hedge.ratio.lagged))
+  signal      <- as.xts(na.omit(cbind(signal.lagged, -1*(signal.lagged))))
+  return.pair <- as.xts(na.omit(.return(price.pair, type = "discrete")))
+  weight.pair <- as.xts(na.omit(HedgeRatio2Weight(hedge.ratio.lagged)))
   #
-  names(return.pair) <- names(price.pair)
-  names(signal)      <- names(price.pair)
-  names(weight.pair) <- names(price.pair)
-  # 
+  #names(return.pair) <- names(price.pair)
+  #names(signal)      <- names(price.pair)
+  #names(weight.pair) <- names(price.pair) 
   #as.xts(apply(signal * weight.pair * return.pair, 1, sum) * leverage)
-  x <- signal * weight.pair * return.pair
+  x <-          as.xts(apply(merge(signal[, 1], weight.pair[, 1], return.pair[, 1], all = FALSE), 1, prod))
+  x <- merge(x, as.xts(apply(merge(signal[, 2], weight.pair[, 2], return.pair[, 2], all = FALSE), 1, prod)))
 
   if(!length(dim(x))){
     xts(rep(NA, nrow(price.pair)), order.by = index(price.pair))

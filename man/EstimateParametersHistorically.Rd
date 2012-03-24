@@ -27,14 +27,8 @@ EstimateParametersHistorically(price.pair, period, method = lm)
   \item{hedge.ratio}{scalar value. "coefficient" in regression}
   \item{premium}{xts object. "intercept" in regression}
 }
-\references{
-}
 \author{
   Shinichi Takayanagi, Kohta Ishikawa
-}
-\note{
-}
-\seealso{
 }
 \examples{
 #load library

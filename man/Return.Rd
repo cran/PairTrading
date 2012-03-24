@@ -4,7 +4,7 @@
 Calculate return of back-test
 }
 \description{
-Calculate performance of pair trading by trading signal
+Calculate the performance of pair trading by specified trading signal and hedge ratio
 }
 \usage{
 Return(price.pair, signal.lagged, hedge.ratio.lagged)
@@ -16,18 +16,15 @@ Return(price.pair, signal.lagged, hedge.ratio.lagged)
 }
 \details{
   You have to consider "lag" to signal, because you can not trade when you calculate your trade position at that time. hedge.ratio.lagged is too.
+  We defined "return" as following that [Return of (Buy-Sell)portfolio = (Return of Price1) * (Investmentratio of Price1)  + (Return of Price2) * (Investment ratio of Price2)
+  In this equation, as you know, "Return" is calculated as "Change ratio of price between two period".
+  We defined "Investment ratio" as following that. [(Investment ratio of Price1) = 1 / (1 + abs(hedge ratio))], [(Investment ratio of Price2) = hedge ratio / (1 + abs(hedge ratio))]
 }
 \value{
   performance data(not price but return) as xts object
 }
-\references{
-}
 \author{
   Shinichi Takayanagi, Kohta Ishikawa
-}
-\note{
-}
-\seealso{
 }
 \examples{
 #load library

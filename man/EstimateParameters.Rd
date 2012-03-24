@@ -25,14 +25,8 @@ EstimateParameters(price.pair, method = lm)
   \item{hedge.ratio}{scalar value. "coefficient" in regression}
   \item{premium}{scalar value. "intercept" in regression}
 }
-\references{
-}
 \author{
   Shinichi Takayanagi, Kohta Ishikawa
-}
-\note{
-}
-\seealso{
 }
 \examples{
 #load library

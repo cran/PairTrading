@@ -1,10 +1,10 @@
 \name{IsStationary}
 \alias{IsStationary}
 \title{
-Check the stationarity of time series (spread) 
+Check the stationarity of time series (especially spread) 
 }
 \description{
-Check time series stationarity by Phillips-Perron Test for Unit Roots and Augmented Dickey-Fuller Test
+Check the stationarity of time series by Phillips-Perron Test for Unit Roots and Augmented Dickey-Fuller Test.
 }
 \usage{
 IsStationary(spread, threshold) 
@@ -13,19 +13,11 @@ IsStationary(spread, threshold)
   \item{spread}{checked time series object(xts)}
   \item{threshold}{threshhold value of p-value}
 }
-\details{
-}
 \value{
   the vector which have the result of each test passed or not.
 }
-\references{
-}
 \author{
   Shinichi Takayanagi, Kohta Ishikawa
-}
-\note{
-}
-\seealso{
 }
 \examples{
 #load library

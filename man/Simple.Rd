@@ -5,13 +5,13 @@
 Create trading Signal
 }
 \description{
-  Create trading signal 
-%Create trading signal by the spread of stock pair
+ Create trading signal by the spread of stock pair. 
+ This function provide you the simplest method to create signal
+ in the meaning that it just create signals according to whether spread is over a threshold or not.
 }
 \usage{
 Simple(spread, spread.entry)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{spread}{the spread of stock pair. an \code{xts} object}
   \item{spread.entry}{Entry level of spread. single scalar.}
@@ -19,16 +19,8 @@ Simple(spread, spread.entry)
 \details{
 This function generates trading singal by spread and it's threshold.
 }
-\value{
-}
-\references{
-}
 \author{
   Shinichi Takayanagi, Kohta Ishikawa
-}
-\note{
-}
-\seealso{
 }
 \examples{
 #load library
